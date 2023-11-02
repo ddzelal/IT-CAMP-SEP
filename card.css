@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-color: rgba(150, 145, 145, 0.452);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    width: 500px;
+    background-color: rgb(231, 230, 230);
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.btnPrime {
+    padding: 5px 15px;
+    background-color: rgb(231, 226, 226);
+    border: 1px solid gray;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+
+
+.headTit span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.headTit {
+    margin-top: 10px;
+}
+
+.btnBlue {
+    padding: 5px 15px;
+    background-color: rgb(107, 107, 200);
+    color: blue;
+    border-radius: 20px;
+}
+
+.btnWrapper {
+    margin-top: 10px;
+}
+
+.text {
+    margin-top: 10px;
+}
