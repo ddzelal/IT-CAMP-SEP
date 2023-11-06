@@ -1,0 +1,8 @@
+Inicijalno napravili smo projekat
+
+
+1. git init : Sluzi nam da kazemo nasem softveru da pocne da prati nas projekat u kojem se nalazimo to radimo samo jednom.
+2. git add . : Sluzi nam da posaljemo nase promene u stage pre commita
+3. git commit -m " "ovde pisete poruku tacnije naziv commita" i sluzi nam da napravimo commit 
+4. git add remote origin "vas repozitori link" : sluzi da usmerimo nas git gde cemo da pushamo remote promene
+5, git push origin "ime vaseg brancha" : Sluzi da posaljemo nase promene na git hub
