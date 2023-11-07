@@ -1,0 +1,51 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    min-height: 200vh;
+    background-color: lightblue;
+}
+
+.navbarcontainer {
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    background-color: red;
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+}
+
+.burgerIcon {
+    font-size: 40px;
+}
+
+.burgerIcon:hover {
+    cursor: pointer;
+    scale: 1.1;
+    opacity: 0.5;
+}
+
+
+
+
+.dropDwonMenu {
+    width: 300px;
+    height: 150px;
+    background-color: black;
+    position: fixed;
+    top: 50px;
+    right: -20px;
+    display: none;
+}
+
+.burgerIcon:hover .dropDwonMenu {
+    display: block;
+}
