@@ -1,0 +1,53 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.card {
+    min-width: 300px;
+    height: 500px;
+    background-color: blue;
+    color: #fff;
+    font-size: 150px;
+}
+
+
+@media only screen and (max-width:1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+        font-size: 15px;
+    }
+
+}
+
+
+@media only screen and (max-width:400px) {
+    .container {
+        background-color: red;
+    }
+
+    .card {
+        width: 90%;
+        font-size: 15px;
+    }
+
+}
