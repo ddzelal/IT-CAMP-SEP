@@ -5,3 +5,7 @@ link-domaci2:https://www.figma.com/file/GrCeLeuBaKLaboaXdH8B2D/Mobile-to-Desktop
 
 
 link-domaci3: https://codingartistweb.com/wp-content/uploads/2021/08/web-01.png
+
+
+
+link-domaci4: https://www.w3schools.com/w3css/tryw3css_templates_band.htm
