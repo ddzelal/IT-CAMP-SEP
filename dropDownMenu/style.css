@@ -8,18 +8,20 @@ body {
 
 .container {
     width: 100%;
-    min-height: 100vh;
+    min-height: 200vh;
     background-color: lightskyblue;
 }
 
 .navcontainer {
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: red;
     display: flex;
     justify-content: end;
     align-items: center;
     padding: 10px;
-    position: relative;
+    /* position: relative;  */
 
 }
 
