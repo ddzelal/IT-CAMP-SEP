@@ -114,6 +114,7 @@ body {
     flex-direction: column;
     justify-content: center;
     color: #fff;
+    content: "TEST!!";
 }
 
 
@@ -171,8 +172,12 @@ body {
         display: none;
     }
 
+    33% {
+        display: none;
+    }
+
     50% {
-        display: flex;
+        display: none;
     }
 
     100% {
@@ -190,6 +195,6 @@ body {
     }
 
     100% {
-        display: flex;
+        display: none;
     }
 }
