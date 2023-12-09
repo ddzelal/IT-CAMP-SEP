@@ -12,3 +12,5 @@ link-domaci4: https://www.w3schools.com/w3css/tryw3css_templates_band.htm
 
 
 test-link : https://forms.gle/UW4ydACkvNfp9zKv9
+
+test-site : https://github.com/dzenankosuta/it-camp-4-grupa/tree/main/HTML-CSS/27.%20Cas%20-%20Test/site
