@@ -139,16 +139,92 @@
 
 
 
-if(true && true){
-    console.log("uslov ispunjen")
-}
-else{
-    console.log("uslov nije ispunjen")
-}
+// if(true && true){
+//     console.log("uslov ispunjen")
+// }
+// else{
+//     console.log("uslov nije ispunjen")
+// }
 
 
 
 // domaci jeste da korisnika pitate koliko zeli novca da ima
 // napraviti takodje store gde mozete kupiti odredjenje artikle
 //ako korisnik uneste neki od ponudjenih onda se provera da li korisnik ima novca dovljno za to ako nema pitamo korisnika
-// da li zeli da se uzajmi i vi korisniku pozajmite onoliko koliko on unese 
+// da li zeli da se uzajmi i vi korisniku pozajmite onoliko koliko on unese
+
+
+
+//  1 > 2 proverava je l 1 vece od 2 output: false
+// 1 < 2 proverava je l 1 manje od 2 output: true
+// 2 == 2 proverava je l 2 jednako 2 otput: true
+// 2 === "2" proverava i tip i vrednost otput je ??? : false
+// && i leva i desna strana moraju da su tacne
+// || jedna strana mora da je true
+//  !flase je negacija od false a to je true!
+// 1 != 2 je l jenda razlicito od 2 ??? otput je ??? true
+// 1 !== "2" proverava i tip 
+
+
+
+// let novac = 150;
+
+// const cokolada = 151;
+// const cips = 60;
+// const nargila = 500;
+
+
+// const staZelisKupiti = prompt("Zdravo mi imamo 1.cokoladu, 2.cips, 3.nargilu sta zelis kuppiti od ponudjenog?")
+// switch(staZelisKupiti){
+//     case "1":
+//         if(cokolada <= novac){
+//             novac -= cokolada;
+//             console.log(`Kupio si cokoladu hvala prijatno evo ti kusur, ${novac}`)
+//         }
+//         else{
+//             console.log("nemate dovoljno novca da li zelite da vas upisem na recku!")
+//             let zajam = prompt("Da ili Ne?").toLowerCase();
+//             if(zajam == 'da'){
+//                 let dug = Number(prompt("Unesite koliko zelite novca!"))
+//                 if(!isNaN(dug)){
+//                     novac +=  dug
+//                     novac -= cokolada;
+//                     console.log(`Kupio si cokoladu i ostalo ti je ${novac}, i ostao si mi duzan ? ${dug}`)
+//                 }
+//                 else{
+//                     console.log("Zao mi je ne mogu ti pozajmiti text!")
+//                 }
+//             }else{
+//                 console.log("Nema veze skupices ti to!")
+//             }
+//         }
+//         break;
+//     case "2":
+//         break;
+//     case "3":
+//         break;
+//     default:
+//         console.log("Doso si samo da gledas, nista nisi kupio..")
+//         break;
+    
+// }
+
+
+
+const broj = prompt("Unesi broj za proveru ")
+
+if(!isNaN(broj)){
+    if(broj == 0){
+        console.log("Broj je neutralan ili je nulica")
+    }else{
+        if(broj % 2 == 0){
+            console.log("broj je paran")
+        }
+        else{
+            console.log("broj je naparan!")
+        }
+    }
+}
+else{
+    console.log('Morate da unesete broj :)')
+}
