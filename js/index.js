@@ -211,20 +211,103 @@
 
 
 
-const broj = prompt("Unesi broj za proveru ")
+// const broj = prompt("Unesi broj za proveru ")
 
-if(!isNaN(broj)){
-    if(broj == 0){
-        console.log("Broj je neutralan ili je nulica")
-    }else{
-        if(broj % 2 == 0){
-            console.log("broj je paran")
-        }
-        else{
-            console.log("broj je naparan!")
-        }
+// if(!isNaN(broj)){
+//     if(broj == 0){
+//         console.log("Broj je neutralan ili je nulica")
+//     }else{
+//         if(broj % 2 == 0){
+//             console.log("broj je paran")
+//         }
+//         else{
+//             console.log("broj je naparan!")
+//         }
+//     }
+// }
+// else{
+//     console.log('Morate da unesete broj :)')
+// }
+
+
+
+// switch("1"){
+//     case "1":
+//         console.log(1)
+//     case "2":
+//         console.log(2)
+//     case "3":
+//         console.log(3);
+//     default:
+//         console.log("4")
+// }
+
+
+
+// const nekiBrojKojiCemoDaPosaljemo = 10;
+// const nekiDrBr = 13;
+// const nekiDrBrTr= 15;
+
+// if(nekiBrojKojiCemoDaPosaljemo % 5 == 0 && nekiBrojKojiCemoDaPosaljemo % 3 == 0){
+//     console.log("fizzBuzz")
+// }else if(nekiBrojKojiCemoDaPosaljemo % 3 == 0){
+//     console.log("fiz")
+// }else if(nekiBrojKojiCemoDaPosaljemo % 5 ==0){
+//     console.log('buzz')
+// }else if(isNaN(nekiBrojKojiCemoDaPosaljemo)){
+//  console.log("niste uneli broj")   
+// }
+// else {
+//     console.log("broj nije deljiv ni sa 3 ni sa 5")
+// }
+
+
+// if(nekiDrBr % 5 == 0 && nekiDrBr % 3 == 0){
+//     console.log("fizzBuzz")
+// }else if(nekiDrBr % 3 == 0){
+//     console.log("fiz")
+// }else if(nekiDrBr % 5 ==0){
+//     console.log('buzz')
+// }else if(isNaN(nekiDrBr)){
+//  console.log("niste uneli broj")   
+// }
+// else {
+//     console.log("broj nije deljiv ni sa 3 ni sa 5")
+// }
+
+
+// if(nekiDrBrTr % 5 == 0 && nekiDrBrTr % 3 == 0){
+//     console.log("fizzBuzz")
+// }else if(nekiDrBrTr % 3 == 0){
+//     console.log("fiz")
+// }else if(nekiDrBrTr % 5 ==0){
+//     console.log('buzz')
+// }else if(isNaN(nekiDrBrTr)){
+//  console.log("niste uneli broj")   
+// }
+// else {
+//     console.log("broj nije deljiv ni sa 3 ni sa 5")
+// }
+
+
+function jeLiBrojFizBuzzIliSamoJedno(mojBroj){
+    console.log(`rec je o borju ${mojBroj}`)
+    if(mojBroj % 5 == 0 && mojBroj % 3 == 0){
+        console.log("fizzBuzz")
+    }else if(mojBroj % 3 == 0){
+        console.log("fiz")
+    }else if(mojBroj % 5 ==0){
+        console.log('buzz')
+    }else if(isNaN(mojBroj)){
+     console.log("niste uneli broj")   
+    }
+    else {
+        console.log("broj nije deljiv ni sa 3 ni sa 5")
     }
 }
-else{
-    console.log('Morate da unesete broj :)')
-}
+
+
+
+jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
+jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
+jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
