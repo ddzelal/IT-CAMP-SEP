@@ -1,3 +1,5 @@
+"use strict"
+
 // console.log('Ovo je nas prvi cas!',2);
 
 
@@ -290,24 +292,72 @@
 // }
 
 
-function jeLiBrojFizBuzzIliSamoJedno(mojBroj){
-    console.log(`rec je o borju ${mojBroj}`)
-    if(mojBroj % 5 == 0 && mojBroj % 3 == 0){
-        console.log("fizzBuzz")
-    }else if(mojBroj % 3 == 0){
-        console.log("fiz")
-    }else if(mojBroj % 5 ==0){
-        console.log('buzz')
-    }else if(isNaN(mojBroj)){
-     console.log("niste uneli broj")   
+// function jeLiBrojFizBuzzIliSamoJedno(mojBroj){
+//     console.log(`rec je o borju ${mojBroj}`)
+//     if(mojBroj % 5 == 0 && mojBroj % 3 == 0){
+//         console.log("fizzBuzz")
+//     }else if(mojBroj % 3 == 0){
+//         console.log("fiz")
+//     }else if(mojBroj % 5 ==0){
+//         console.log('buzz')
+//     }else if(isNaN(mojBroj)){
+//      console.log("niste uneli broj")   
+//     }
+//     else {
+//         console.log("broj nije deljiv ni sa 3 ni sa 5")
+//     }
+// }
+
+
+
+// jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
+// jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
+// jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
+
+
+
+
+
+
+function kalkulator(brojA,brojB,operacija){
+    if(operacija == "+"){
+        let sum = brojA + brojB
+        console.log(`${brojA} + ${brojB} = ${sum}`)
+    }
+    else if(operacija == "-"){
+        let razlika = brojA - brojB
+        console.log(`${brojA} - ${brojB} = ${razlika}`)
     }
     else {
-        console.log("broj nije deljiv ni sa 3 ni sa 5")
+        console.log(`Niste uneli ispravnu operacij!`)
     }
+}
+function jelKorisnikUneoBroj(kojiBr){
+    let broj;
+    while(isNaN(broj)){
+        broj = Number(prompt(`Unesite broj ${kojiBr}`))
+        console.log(broj)
+    }
+    return broj;
+
 }
 
 
+let brojA,brojB
 
-jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
-jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
-jeLiBrojFizBuzzIliSamoJedno(prompt("Unesi broj prvi"))
+
+brojA = jelKorisnikUneoBroj("a")
+brojB = jelKorisnikUneoBroj("b")
+
+let operacija;
+
+
+
+while(operacija !== "+" && operacija !== "-" && operacija !== "/" && operacija !== "*"){
+    operacija = prompt("Unesite neku operaciju od ponudjenih : +, -,/,* ")
+}
+
+kalkulator(brojA,brojB,operacija)
+
+
+
