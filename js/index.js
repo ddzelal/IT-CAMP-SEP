@@ -319,45 +319,167 @@
 
 
 
-function kalkulator(brojA,brojB,operacija){
-    if(operacija == "+"){
-        let sum = brojA + brojB
-        console.log(`${brojA} + ${brojB} = ${sum}`)
+// function kalkulator(brojA,brojB,operacija){
+//     if(operacija == "+"){
+//         let sum = brojA + brojB
+//         console.log(`${brojA} + ${brojB} = ${sum}`)
+//     }
+//     else if(operacija == "-"){
+//         let razlika = brojA - brojB
+//         console.log(`${brojA} - ${brojB} = ${razlika}`)
+//     }
+//     else {
+//         console.log(`Niste uneli ispravnu operacij!`)
+//     }
+// }
+// function jelKorisnikUneoBroj(kojiBr){
+//     let broj;
+//     while(isNaN(broj)){
+//         broj = Number(prompt(`Unesite broj ${kojiBr}`))
+//         console.log(broj)
+//     }
+//     return broj;
+
+// }
+
+
+// let brojA,brojB
+
+
+// brojA = jelKorisnikUneoBroj("a")
+// brojB = jelKorisnikUneoBroj("b")
+
+// let operacija;
+
+
+
+// while(operacija !== "+" && operacija !== "-" && operacija !== "/" && operacija !== "*"){
+//     operacija = prompt("Unesite neku operaciju od ponudjenih : +, -,/,* ")
+// }
+
+// kalkulator(brojA,brojB,operacija)
+
+
+// napraviti funkciju koja prima kao arg string nakon toga ta funkcija pokusava da obradi taj string u nabuer i nakon toga vraca taj 
+// namer vi vrednost te fun cuvate u var i nakon toga console log proverite tip te var
+// ako ne mozete da konvertujete to u number vi vratiet string + nisam mogao da se konvertujem.... :D
+
+// let test = 2;
+
+// console.log(test)
+
+// test = 23;
+
+// console.log(test)
+
+// console.log(test - test)
+
+
+// test = 0;
+
+// console.log(1)
+
+
+// console.log(typeof test)
+
+
+
+
+
+
+
+
+// let unos1 =pretvarac("")
+// let unos2 =pretvarac("23")
+// let unos3 =pretvarac("dwadwa")
+// let unos4 =pretvarac(23)
+
+
+// console.log(Number("a" !== "a"))
+
+
+
+function pretvarac(unos){
+    if(typeof unos == 'string' && unos == ""){
+        return unos + "Bio sam prazan"
     }
-    else if(operacija == "-"){
-        let razlika = brojA - brojB
-        console.log(`${brojA} - ${brojB} = ${razlika}`)
+    else if(isNaN(Number(unos))){
+        return unos + "Nisam mogao da se pretvorim..."
     }
     else {
-        console.log(`Niste uneli ispravnu operacij!`)
+        return Number(unos)
     }
 }
-function jelKorisnikUneoBroj(kojiBr){
-    let broj;
-    while(isNaN(broj)){
-        broj = Number(prompt(`Unesite broj ${kojiBr}`))
-        console.log(broj)
+
+
+// console.log(unos1,unos2,unos3,unos4)
+
+// let faris = 23
+
+// const ime = "12" - faris
+
+// console.log(ime)
+
+
+
+// const arr = [1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6,1,2,3,4,5,6];
+
+
+// let res = 0;
+
+
+// let counter = arr.length - 1;
+// while(counter >= 0){
+//     if(arr[counter] % 2 == 0){
+//         res = res + arr[counter]
+//     }
+//     counter--;
+// }
+
+
+// console.log(res)
+
+
+// let parni = 0;
+// let neparni = 0;
+// const arr = [1,2,3,4,5,6,712,23,12,323,5]
+// let counter = arr.length -1;
+// while(counter >= 0){
+//     if(arr[counter] % 2 == 0){
+//         parni = parni+arr[counter]
+//     }
+//     else {
+//         neparni = neparni+arr[counter]
+//     }
+//     counter--;
+// }
+
+// console.log(parni,"ovo su parni",neparni,"ovo su neparni..")
+
+
+
+const arrTest = [1,2,3,4,5,6,7,8,9,10,11,12]
+const parni =[];
+const neparni = [];
+
+let index = 0
+
+while(index < arrTest.length){
+    if(arrTest[index] % 2 == 0){
+        parni.push(arrTest[index])
     }
-    return broj;
-
+    else{
+        neparni.push(arrTest[index])
+    }
+    index++;
 }
 
+console.log(parni,"parni")
+console.log(neparni,"neparni")
 
-let brojA,brojB
+const noviArr = []
 
-
-brojA = jelKorisnikUneoBroj("a")
-brojB = jelKorisnikUneoBroj("b")
-
-let operacija;
-
-
-
-while(operacija !== "+" && operacija !== "-" && operacija !== "/" && operacija !== "*"){
-    operacija = prompt("Unesite neku operaciju od ponudjenih : +, -,/,* ")
-}
-
-kalkulator(brojA,brojB,operacija)
+// Sad u novi Arr treba da smestite sumu prvi parni i poslednji neparni i sve tako u krug .... 
 
 
 
