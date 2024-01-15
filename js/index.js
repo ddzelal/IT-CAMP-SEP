@@ -482,4 +482,8 @@ const noviArr = []
 // Sad u novi Arr treba da smestite sumu prvi parni i poslednji neparni i sve tako u krug .... 
 
 
+// [ 2, 4, 6, 8, 10, 12 ] parni
+// [ 1, 3, 5, 7, 9, 11 ] neparni
+//rezultat treb  da bude [13,13,13,13,13,13]
+
 
