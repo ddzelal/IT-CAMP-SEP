@@ -459,26 +459,42 @@ function pretvarac(unos){
 
 
 const arrTest = [1,2,3,4,5,6,7,8,9,10,11,12]
-const parni =[];
-const neparni = [];
 
-let index = 0
 
-while(index < arrTest.length){
-    if(arrTest[index] % 2 == 0){
-        parni.push(arrTest[index])
-    }
-    else{
-        neparni.push(arrTest[index])
-    }
-    index++;
-}
 
-console.log(parni,"parni")
-console.log(neparni,"neparni")
 
-const noviArr = []
+// let start = 0
+// let end = arrTest.length -1
+// let newArr = [];
 
+
+// while(start < arrTest.length /2){
+//     newArr.push(arrTest[start] + arrTest[end])
+//     start++;
+//     end--;
+// }
+
+
+let brojac1 = 0;
+let brojac2 = 0;
+let brojac3 = 0;
+
+console.log(brojac1,brojac2,brojac3)
+
+
+// let prom = prompt("unesite text")
+
+
+// da napravite funckiju koja proverava je l promt palindrom
+
+
+// 121
+// 11211
+// ana
+// gereg
+// kemal
+
+// console.log(newArr)
 // Sad u novi Arr treba da smestite sumu prvi parni i poslednji neparni i sve tako u krug .... 
 
 
@@ -486,4 +502,27 @@ const noviArr = []
 // [ 1, 3, 5, 7, 9, 11 ] neparni
 //rezultat treb  da bude [13,13,13,13,13,13]
 
+const text = "aattaa"
+let newText = ""
 
+
+
+for (let i = text.length-1; i >= 0; i--) {
+ newText= newText+text[i];
+}
+
+
+
+if(newText === text){
+    console.log("ovo je palindrom")
+}
+else {
+    console.log("ovo nije palindrom")
+}
+
+
+for (let i = 0,j = text.length -1; i < text.length /2; i++,j--) {
+    if(text[i] !== text[j]){
+        console.log("ovo nije palindrom!")
+    }
+}
