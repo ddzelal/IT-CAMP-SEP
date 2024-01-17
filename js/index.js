@@ -458,7 +458,7 @@ function pretvarac(unos){
 
 
 
-const arrTest = [1,2,3,4,5,6,7,8,9,10,11,12]
+// const arrTest = [1,2,3,4,5,6,7,8,9,10,11,12]
 
 
 
@@ -475,11 +475,11 @@ const arrTest = [1,2,3,4,5,6,7,8,9,10,11,12]
 // }
 
 
-let brojac1 = 0;
-let brojac2 = 0;
-let brojac3 = 0;
+// let brojac1 = 0;
+// let brojac2 = 0;
+// let brojac3 = 0;
 
-console.log(brojac1,brojac2,brojac3)
+// console.log(brojac1,brojac2,brojac3)
 
 
 // let prom = prompt("unesite text")
@@ -502,27 +502,99 @@ console.log(brojac1,brojac2,brojac3)
 // [ 1, 3, 5, 7, 9, 11 ] neparni
 //rezultat treb  da bude [13,13,13,13,13,13]
 
-const text = "aattaa"
-let newText = ""
+// const text = "aattaa"
+// let newText = ""
 
 
 
-for (let i = text.length-1; i >= 0; i--) {
- newText= newText+text[i];
-}
+// for (let i = text.length-1; i >= 0; i--) {
+//  newText= newText+text[i];
+// }
 
 
 
-if(newText === text){
-    console.log("ovo je palindrom")
-}
-else {
-    console.log("ovo nije palindrom")
-}
+// if(newText === text){
+//     console.log("ovo je palindrom")
+// }
+// else {
+//     console.log("ovo nije palindrom")
+// }
 
 
-for (let i = 0,j = text.length -1; i < text.length /2; i++,j--) {
-    if(text[i] !== text[j]){
-        console.log("ovo nije palindrom!")
+// for (let i = 0,j = text.length -1; i < text.length /2; i++,j--) {
+//     if(text[i] !== text[j]){
+//         console.log("ovo nije palindrom!")
+//     }
+// }
+
+
+
+
+// ovo su podaci iz baze
+
+// const username = "faris"
+// const password = "faris123"
+// let unosUsername = ""
+// let unosPassword = ""
+
+
+
+
+// while(username !== unosUsername){
+//      unosUsername = prompt("Unesite username")
+//      if(unosUsername !== username){
+//         alert("Pogresili ste username ili password")
+//      }
+// }
+
+// while(password !== unosPassword){
+//      unosPassword = prompt("Unesite password")
+//      if(unosPassword !== password){
+//         alert("Pogresili ste username ili password")
+//      }
+// }
+
+// alert("Uspesno ste se ulogovali")
+
+
+// window.location.replace("/home/dzelal/Desktop/dzelal-public/IT-CAMP-SEP/flex.html")
+
+
+// const arr = [1,2,3,4,5,6,7]
+// const arr2 = [1,3,3,5,6,7,8]
+
+
+// // 7,6,5,4,3,2,1
+// const newArr = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] === arr2[i]){
+//         newArr.push(arr[i])
+//     }
+// 
+
+
+const arrDiagonala = [[1,2,3],[4,5,6],[7,8,9]]
+
+// treba da se ispise 1,5,9
+
+const arr2 = [[1,2,3],[1,2,3],[1,2,3]];
+const newArr =[]
+for (let i = 0; i < arr2.length; i++) {
+    for (let j = 0; j < arr2[i].length; j++) {
+        newArr.push(arr2[i][j])
     }
 }
+
+
+console.log(newArr);
+
+// console.log(newArr);
+
+// Iterirate for petljom tako da proveravate da li se na trenutom brojacu od arr1 i arr2 
+// nalaze isit brojevi ako se nalaze onda ih pusate u novi arr
+
+ 
+
+
+
