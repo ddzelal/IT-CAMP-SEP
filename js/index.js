@@ -598,3 +598,69 @@ console.log(newArr);
 
 
 
+
+
+const domaciArr = [[1,2,3],
+                    [4,5,6],
+                    [7,8,9]]
+const noviDomaciArr=[]
+for (let i = domaciArr.length-1,j=0; i >= 0; i--,j++) {
+    noviDomaciArr.push(domaciArr[j][i])
+}
+
+
+
+console.log(noviDomaciArr);
+
+
+
+
+// imma arr.push(el) ubacuje el na poslednje mesto
+// imamo arr.pop() izbacije poslednji element
+// imamo arr.shift() on nam izbacuje prvi el iz niza
+// imamo arr.unshift(el) da ubacimo el na pocetak niza
+
+const test = "ime-prezime";
+let ime = ""
+let prezime = ""
+let pomocnaVar = false;
+
+
+for (let i = 0; i < test.length; i++) {
+    if(test[i] === '-'){
+        pomocnaVar = true;
+        continue;
+    }
+    if(pomocnaVar === false) {
+        ime+=test[i]
+    }
+    if(pomocnaVar === true){
+        prezime+= test[i]
+    }
+}
+
+
+
+
+for (let i = 0; i <= 4; i++) {
+    if(i === 2){
+        continue;
+    }
+    console.log(i);
+}
+
+
+console.log(ime,prezime);
+
+
+
+
+
+// Na primer korisnik unese broj n
+//  vi na osnovu tog broja n treba da uradite spratove zvezdica
+// pa na primer ako korisnik unese broj 3 
+// onda vas output treba da bude 
+
+// *
+// **
+// *** 
