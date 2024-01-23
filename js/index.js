@@ -664,3 +664,81 @@ console.log(ime,prezime);
 // *
 // **
 // *** 
+
+const unos = 3;
+const noviNiz =[];
+for (let i = 0; i < unos; i++) {
+    let biloSta = "";
+    for (let j = 0; j <= i; j++) {
+        biloSta+='*'     
+    }    
+    noviNiz.push(biloSta)
+}
+
+
+
+// OVako za domaci
+//     *
+//    ***
+//   *****
+console.log(noviNiz.join("\n"));
+
+const nest = noviNiz.join('\n')
+
+console.log(nest);
+
+
+
+// NPR
+
+
+const arr = [1,2,3,4,5,6,7,8,9]
+// zelim da mi je output 1-2-3-4-5-6-7-8-9-9
+
+const nesto = arr.join("-")
+
+console.log(nesto);
+
+const bezCrtica = nesto.split("-")
+
+console.log(bezCrtica);
+
+
+
+console.log(arr.includes(10));
+
+
+
+
+
+const arr1 = [1,2,3,4,5,6,7,8,9]
+const arr3 = [2,2,3,1,5,6,7,21,5,76,8,9]
+
+
+const arr4 = [];
+
+
+
+
+
+const nekiArrOdBrojeva = [1,2,3,4,5,6,7,8,9]
+
+
+console.log(nekiArrOdBrojeva.includes(1));
+
+// Nama treba string takav da izmedju svakog elementa mi imamo crticu -
+// output bi trebao biti 1-2-3-4-5-6-7-8-9
+
+
+const toStoNamTreba = nekiArrOdBrojeva.join("\n")
+
+
+console.log(toStoNamTreba);
+
+const boljiPrimer = "ime-prezime"
+
+const bezCrtice = boljiPrimer.split("-")
+
+console.log(bezCrtica);
+
+
