@@ -742,3 +742,86 @@ const bezCrtice = boljiPrimer.split("-")
 console.log(bezCrtica);
 
 
+
+const testString = "Ana voli milovana"
+
+const testNoviString = testString.replace("voli","ne voli")
+
+console.log(testNoviString);
+
+
+
+const ahmed = "ahmed nije dolazio par dana"
+const ahmedjeste = ahmed.replace("nije dolazio","dolazio je")
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+
+
+
+const niz = [1,2,3,4,5,6,7,8,9]
+
+const testNiz = niz.join("").replace("2","3").split("").map((el) => Number(el))
+
+
+
+
+
+const bekir = "Bekir je dolazio svaki dan na casove"
+
+const davidmo = bekir.replace("je","nije")
+
+
+
+const proba = "23233412313131test"
+
+const proba2 = proba.replace("2","nije dolazio ")
+
+console.log(proba2);
+
+console.log(davidmo);
+
+
+
+const kemalGreskaUKoracima = "Kemal je pogodio odgovor"
+
+const daVdimo = kemalGreskaUKoracima.replace("pogodio","nije pogodio")
+
+console.log(daVdimo);
+
+
+
+const dajemPrimer = [1,2,2,4,5,6,7,8,2,10]
+
+
+// const sergej = "sergej je dosao na vreme"
+// const isSergej = sergej.replace("je","nije")
+// console.log(isSergej);
+
+
+// console.log(dajemPrimer.lastIndexOf(2))
+
+
+// for (let i = 0; i < dajemPrimer.length; i++) {
+//     dajemPrimer[i] = String(dajemPrimer[i] * dajemPrimer[i])    
+// }
+
+
+
+
+const zadatakZadaca = [12,32,32,321,213,3213,1313131,313131]
+
+
+const  bucanResenje = zadatakZadaca.map((el,i,arr) => {
+    if(i === 0){
+       return el;
+    }
+    else {
+        if(el % 2 === 0){
+            return el-arr[i-1]
+        }
+        else  {
+            return el
+        }    }
+})
+
+console.log(bucanResenje);
