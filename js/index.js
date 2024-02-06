@@ -780,38 +780,27 @@ console.log(proba2);
 
 console.log(davidmo);
 
-
-
 const kemalGreskaUKoracima = "Kemal je pogodio odgovor"
 
 const daVdimo = kemalGreskaUKoracima.replace("pogodio","nije pogodio")
 
 console.log(daVdimo);
 
-
-
 const dajemPrimer = [1,2,2,4,5,6,7,8,2,10]
-
 
 // const sergej = "sergej je dosao na vreme"
 // const isSergej = sergej.replace("je","nije")
 // console.log(isSergej);
 
-
 // console.log(dajemPrimer.lastIndexOf(2))
-
 
 // for (let i = 0; i < dajemPrimer.length; i++) {
 //     dajemPrimer[i] = String(dajemPrimer[i] * dajemPrimer[i])    
 // }
 
-
-
-
 const zadatakZadaca = [12,32,32,321,213,3213,1313131,313131]
 
-
-const  bucanResenje = zadatakZadaca.map((el,i,arr) => {
+const  bucanResenje = zadatakZadaca.map( (el,i,arr) => {
     if(i === 0){
        return el;
     }
@@ -825,3 +814,261 @@ const  bucanResenje = zadatakZadaca.map((el,i,arr) => {
 })
 
 console.log(bucanResenje);
+
+const t = ""
+
+
+function sumTwoNum (a,b){
+    return a+b
+}
+
+
+sumTwoNum(1,2)
+
+
+const test1 = zadatakZadaca.map((el,index,arr)=>{
+    console.log(arr);
+    if(index % 2 === 0){
+        return el +1
+    }
+    else {
+        return el;
+    }
+})
+
+
+console.log(test1,"test");
+
+const vasZadatakJeste = [1,2,3,4,5,6,7,8,9,10]
+
+const saStrelicama = vasZadatakJeste.map((el) => {
+if(el % 2 === 0){
+   return el -1
+}
+else {
+   return el +1
+}
+})
+
+console.log(saStrelicama);
+
+saStrelicama.forEach((el,i,arr)=>{
+
+})
+
+
+
+// function ispisiIme(ime){
+//    return ime
+// }
+
+
+// function reciCao(fun,ime){
+
+//     const ime1 = fun(ime)
+//     console.log("cao" + ime1);
+//     return 0;
+// }
+
+// console.log(reciCao(ispisiIme,"dzelal"));
+
+function ovaDruga(){
+    console.log("CAOO!!!");
+}
+
+function reciCao(drugaFunkcijaKojaCeDaSeIzvrisi){
+    drugaFunkcijaKojaCeDaSeIzvrisi();
+    return "faris"
+}
+
+console.log(reciCao(ovaDruga));
+
+function myCustomMap(){
+}
+const br1 = 1;
+const br2 = 3
+let operator = "/2";
+
+// console.log(eval(`${br1} ${operator} ${br2}`));
+
+// console.log(operator.charAt(1));
+// console.log(operator.charCodeAt());
+
+const kemal = [1,2,3,4,5,67,8,9,0,10,12,32,14]
+const veljko = [2,3,4,5,6,7,8,12,32]
+
+let kemalVeljko =[];
+
+// NEMA OVOGA!
+kemalVeljko = kemal.concat(veljko)
+
+console.log(kemalVeljko);
+
+const testArr = ["2","2","3"] - ["2","23"]
+
+console.log(testArr);
+
+
+function customMap(arr){
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i] + 1)
+    }
+    return newArr;
+}
+
+const svi = [1,2,3421,321321,321321,12,21312312]
+
+const samoNeparni = [];
+
+// for (let I = 0; I < svi.length; I++) {
+//     if(svi[I] % 2 !== 0) samoNeparni.push(svi[I])    
+// }
+
+// console.log(samoNeparni);
+
+// NESTO NOVO!>>>>
+const samoNeparniSaFilter = svi.filter((el) => el & 1)
+// NESTO NOVO2! >>>>
+const drugiPrimer = svi.filter((el) => el % 2 !== 0)
+
+console.log(samoNeparniSaFilter);
+
+console.log(drugiPrimer.includes(false));
+
+const bazaPodataka = ["Ahmed","Silvester","Veljko","Nerma","Faris","Mervan","Sergejbit"]
+
+const sergejBezBit = "";
+
+bazaPodataka.forEach((el)=>{
+    console.log(el);
+})
+
+
+const dajmePrimerZaSergejBit = "Sergejbit"
+
+console.log(funkcijaKojaNazivaCao());
+
+function funkcijaKojaNazivaCao(){
+    console.log("cao!!! ahmede!!");
+    return "dada"    
+}
+
+
+// console.log(test23);
+// console.log(test24);
+console.log(test25);
+
+
+var test25 = 43;
+let test24 = 32;
+const test23 = 32;
+
+console.log(test25);
+
+arr1.forEach(()=>{
+})
+
+for(let i = 0; i < 10; i++) {
+}
+
+
+
+const imateImamo = [[[123],[2323]],[[323],[32323]]]
+
+const faris = imateImamo.flat(2).some((el) => el > 2)
+
+
+// treba da bude [1,2,3,32,23232,323232]
+// imate 3 min + 1 + 2 + 40sec
+
+console.log(typeof null);
+let mojAhmedovArr = [];
+
+
+for (let i = 0; i < imateImamo.length; i++) {
+    for (let j = 0; j < imateImamo[i].length; j++) {
+            mojAhmedovArr.push(imateImamo[i][j])    
+            
+    }
+}
+
+
+
+const flex = imateImamo.flat(2)
+console.log(flex);
+
+const testSome = [1,2323,32323,3232,23]
+
+
+console.log(testSome.some((el) => el >2));
+
+
+
+{
+    {
+        const kemal123 = "1232131"
+        var test12 = "testse"
+        {
+
+            console.log(kemal123);
+        }
+    }
+}
+
+console.log(test12);
+
+const nadijaBilaNaKop = [1,2,3,4,5,6,7,8,9]
+
+let sumNadIIIIJJJJa = 0;
+for (let i = 0; i < nadijaBilaNaKop.length; i++) {
+    sumNadIIIIJJJJa+= nadijaBilaNaKop[i]
+}
+
+
+console.log(sumNadIIIIJJJJa);
+
+let kracaNadiiijjjja = 0;
+
+nadijaBilaNaKop.forEach((el)=>{
+    kracaNadiiijjjja+=el;
+})
+
+console.log(kracaNadiiijjjja);
+
+
+
+
+const ucenici = [["Kemal","Skrijelj",18,"SVE"],["Ahmed","JereRaslja",16,"Drugari"]]
+
+console.log(ucenici[0]);
+
+const kemal2 = {
+    ime:"Kemal",
+    prezime: "Skrijelj",
+    godine:18,
+    hobi:["kosarka","ispijanje kafe","programiranje"],
+    lokacija:{
+        grad:"Novi Zarpa",
+        drzava:"Srbija"
+    }
+}
+
+kemal2.ime = "test"
+
+
+let test321 = "t"
+
+console.log(test321);
+
+test321 = "23"
+
+console.log(test23);
+
+console.log(kemal2);
+
+
+
+
+
+
