@@ -1082,54 +1082,56 @@
 
 
 
-const osoba = {
-    ime:"",
-    prezime:"",
-    godine:0,
-    grad:"",
-    hobi:[]
-}
+// const osoba = {
+//     ime:"",
+//     prezime:"",
+//     godine:0,
+//     grad:"",
+//     hobi:[]
+// }
 
-while(osoba.ime.length < 1){
-    osoba.ime = prompt("unesite vase ime")
-}
+// while(osoba.ime.length < 1){
+//     osoba.ime = prompt("unesite vase ime")
+// }
 
-while(osoba.prezime < 1){
-    osoba.prezime = prompt("unesite vase prezime")
-}
+// while(osoba.prezime < 1){
+//     osoba.prezime = prompt("unesite vase prezime")
+// }
 
-while(osoba.godine > 0){
-    osoba.godine = Number(prompt("Unesite vase godine"))
-}
+// while(osoba.godine > 0){
+//     osoba.godine = Number(prompt("Unesite vase godine"))
+// }
 
-osoba.grad = prompt("Unesite vas grad")
+// osoba.grad = prompt("Unesite vas grad")
 
-let brojac = 1;
-let jos = true
-
-
-while(osoba.hobi.length < 1 || jos){
-    let hobi = prompt(`uensite vas hobi br ${brojac} `)
-    osoba.hobi.push(hobi)
-    let hocesJos = prompt("da li zelis da dodas jos hobia, DA/NE")
-    if(hocesJos.toLocaleLowerCase() == "ne"){
-        jos = false
-    }
-    brojac++;
-}
+// let brojac = 1;
+// let jos = true
 
 
-console.log(osoba,"osoba!");
+// while(osoba.hobi.length < 1 || jos){
+//     let hobi = prompt(`uensite vas hobi br ${brojac} `)
+//     osoba.hobi.push(hobi)
+//     let hocesJos = prompt("da li zelis da dodas jos hobia, DA/NE")
+//     if(hocesJos.toLocaleLowerCase() == "ne"){
+//         jos = false
+//     }
+//     brojac++;
+// }
 
 
+// console.log(osoba,"osoba!");
 
 
 
-const kreiraniUser = {
-    korisnicko_ime:"",
-    email:"",
-    sifra:""
-}
+
+
+// const kreiraniUser = {
+//     korisnicko_ime:"",
+//     email:"",
+//     sifra:""
+// }
+
+
 
 
 // KAKO PROGRAM KRECE VI TREBATE DA KREIRATE USERA.....
@@ -1140,3 +1142,154 @@ const kreiraniUser = {
 
 
 
+
+// const output = {
+// }
+
+// console.log(kreiraniUser.hasOwnProperty('email'));
+
+// const sergejOdeNaKop = new Set(arr)
+
+
+// const arr = [1,1,2,1,3,3,5]
+// arr.forEach((el) => {
+//     console.log(output[el]);
+//     output[el] = (output[el] || 0) + 1
+//     console.log(output);
+//     console.log('========================');
+// })
+    
+
+// console.log(output,"tes!");
+
+// const testThis = () =>{
+//     console.log(this);
+// }
+
+// (function(){
+//     console.log(this);
+// })()
+
+// console.log(testThis());
+
+// const kemal = {
+//     ime:"Kemal",
+//     prezime:"Skrijelj"
+// }
+
+// const nerma = {
+//     ime:"Nerma",
+//     prezime:"Corovic"
+// }
+
+
+
+// class Zmaj {
+//     constructor(brojGlava,brojKrila,boja,ime){
+//          this.brojGlava = brojGlava,
+//          this.brojKrila = brojKrila,
+//          this.boja = boja,
+//          this.ime = ime
+//     }
+//     getInfo(){
+//         console.log(this.boja,this.brojGlava);
+//     }
+
+// }
+
+// const mervanovZmaj = new Zmaj(3,2,"crvena","meki")
+// const farisovZmaj = new Zmaj(2,3,"plava","faxi")
+
+// mervanovZmaj.dada = "dwadwa"
+
+// console.log(mervanovZmaj);
+// console.log(farisovZmaj);
+
+
+// Napravit cllasu osoba koja ce da ima : ime,prezime,godiste i metodu koja vraca vasu staros
+
+
+// class Kalkulator {
+//     static izracunajAiB(a,b){
+//         console.log(a+b);
+//     }
+//     static pomnoziAiB(a,b){
+//             console.log(a*b);
+//     }
+// }
+
+// Kalkulator.izracunajAiB(2,3)
+//  class Covek {
+//     constructor(ime,prezime,godine){
+//         this.ime = ime,
+//         this.prezime = prezime,
+//         this.godine = godine
+//     }
+
+//          ispisImePrezime(){
+//         console.log(`Vase ime i prezime jeste:${this.ime} ${this.prezime}`);
+//     }
+// }
+
+// const ahmed = new Covek("Ahmed","Jerebicanin",13)
+// const kemal = new Covek("Kemal","Skrijelj",18)
+
+// Vas zadatak jeste da omogucite da korisnik unosi accounte koliko on zeli 
+// minimum 3. Account ce imati username password i email i godine.
+// Znaci sve dok korisnik ne klikne necu vise, imace mogucnost da unosi nove i nove accounte
+// Na kraju kada korisnik klikne da ne zeli vise, pitate ga ciji info zeli i ako unese 2 prikazace
+// mu se info drugog unetog accounta
+
+
+
+
+// let sviKorisnici = []
+// let zelimJosKorsnika = true;
+// class Covek {
+//     constructor(){
+//         this.korisnickoIme = prompt("Unesite korisnicko ime")
+//         this.lozinka = prompt("Unesite vasu lozinku")
+//     }
+
+//     informacijeOKorisniku(){
+//         console.log(this.korisnickoIme);
+//     }
+// }
+
+
+// let counter = 0 
+
+
+// while(counter < 3){
+//     sviKorisnici.push(new Covek());
+//     counter++
+// }
+
+// while(zelimJosKorsnika){
+//  const daNe =  prompt("da li zelis jos korisnika ?") 
+//  if(daNe.toLocaleLowerCase() === 'ne'){
+//     zelimJosKorsnika = false
+//  }
+//  if(zelimJosKorsnika){
+//      sviKorisnici.push(new Covek())
+//  }
+// }
+
+// const index = prompt(`Kojeg korisnika zelis od 1 do ${sviKorisnici.length}`)
+
+// console.log(sviKorisnici[Number(index -1)].informacijeOKorisniku());
+
+
+
+
+
+
+
+if(!localStorage.getItem("jelKorisnikUlogovan?")){
+    localStorage.setItem("korisnickoime",prompt("unesi korisnicko ime"))
+    localStorage.setItem("sifra",prompt("unesi sifru"))
+    localStorage.setItem('jelKorisnikUlogovan?',true)
+}
+else {
+    alert(`Dobro dosao ${localStorage.getItem("korisnickoime")}`)
+}
