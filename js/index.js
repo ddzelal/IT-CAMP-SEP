@@ -1285,11 +1285,170 @@
 
 
 
-if(!localStorage.getItem("jelKorisnikUlogovan?")){
-    localStorage.setItem("korisnickoime",prompt("unesi korisnicko ime"))
-    localStorage.setItem("sifra",prompt("unesi sifru"))
-    localStorage.setItem('jelKorisnikUlogovan?',true)
+
+
+// if(!localStorage.getItem("jelKorisnikUlogovan?")){
+//     localStorage.setItem("korisnickoime",prompt("unesi korisnicko ime"))
+//     localStorage.setItem("sifra",prompt("unesi sifru"))
+//     localStorage.setItem('jelKorisnikUlogovan?',true)
+// }
+// else {
+//     alert(`Dobro dosao ${localStorage.getItem("korisnickoime")}`)
+// }
+
+
+
+// localStorage.setItem('ulogovaniKorsnik','silvester')
+// console.log(localStorage.getItem('ulogovaniKorsnik'));
+// const osoba = {
+//     ime:"dzelal",
+//     prezime:"dupjak",
+//     godine:25
+// }
+
+// Object.entries(osoba).forEach(([key,value])=>{
+//     console.log(typeof key,typeof value);
+// })
+
+
+
+// class Osoba {
+//     constructor(ime,prezime,godine){
+//         this.ime = ime,
+//         this.prezime = prezime,
+//         this.godine = godine
+//     }
+// }
+
+
+
+// class Ucenik extends Osoba {
+//     constructor(skola,ime,prezime,godine){
+//         super(ime,prezime,godine)
+//         this.skola = skola
+//     }
+//     informacije(){
+//         console.log(this.godine,this.ime,this.prezime,this.skola);
+//     }
+// }
+
+// const kemal = new Ucenik("Gimnazija np","Fahmed","Bayern",14)
+
+// kemal.informacije();
+
+// const arr = [1,2,3,4,5,6,7,8,9]
+// const test = {imamo:"2",nemamo:2}
+// const sum = arr.reduce((prevVal,currVel)=>{
+//     console.log(prevVal,"prevVel");
+//     return prevVal + currVel
+// },10)
+
+
+// console.log(sum,"sum from reducer");
+// let sum2 = 0
+// arr.forEach((el)=> sum2+=el)
+// console.log(sum2);
+// const knjige = [{ime:"knj1",brojStr:200,tip:"roman"},{ime:"knj2",brojStr:220,tip:"istorija"},{ime:"knj2",brojStr:120,tip:"roman"},{ime:"knj2",brojStr:320,tip:"roman"}]
+
+// const sumOfroman = knjige.reduce((prevVel,el)=>{
+//     if(el.tip === "roman"){
+//         return prevVel + el.brojStr
+//     }
+//     else {
+//         return prevVel;
+//     }
+// },0)
+
+// console.log(sumOfroman);
+
+
+// const kemal = {
+//     ime:"kema",
+//     prezime:"skrijelj",
+//     godine:23
+// }
+
+// const {ime,...rest} = kemal;
+
+
+// console.log(rest);
+
+
+
+// const terOper = 2 === 2 ? true : false
+
+// const jesamLijaCovek = "covek" == "zena" ? "jesteCovek" : "NijeCovek"
+
+
+// console.table(terOper);
+
+// // dodati jos jedan propery "prezime"
+// const arrObj = [{ime:'ime'},{ime:"ime2"}]
+
+
+
+// const arrOdKljuceva=[]
+// const arrOdVrednosti =[]
+
+// const test12 ={
+//     ime:"test",
+//     prezime:"test",
+//     godine:12,
+//     lokacija:"1321"
+// }
+
+
+
+
+// console.log("Kemal ovo ono 1");
+
+// setTimeout(()=>{
+//     console.log("Kemal ovo ono 2");
+//     setTimeout(()=>{
+//         console.log("Kemal ovo ono 3");
+//     },0)
+// },5000)
+
+// console.log("Kemal ovo no 4" + setTimeout(()=>{
+//     console.log("Keaml ovo no 5" + setTimeout(()=>{
+//         console.log("Kemal ovo ono 6" + setTimeout(()=>{
+//             console.log("kemal ovo no 7" + setTimeout(()=>{},0));
+//         },0));
+//     }));
+// },3600));
+
+
+// setTimeout(()=>{
+// console.log("Kemal ovo no 6");
+// },0)
+
+
+// 1 , 6 , 5, 4 , 2 ,  3
+
+
+
+
+// setTimeout(()=>{
+//     console.log(1);
+// },1500)
+
+
+// setTimeout(()=>{
+// console.log(2);
+// },1499)
+
+
+// console.log(3);
+
+
+
+const kemal = 2
+
+
+try {
+    kemal = 3
+} catch (error) {
+    // console.log(error);    
 }
-else {
-    alert(`Dobro dosao ${localStorage.getItem("korisnickoime")}`)
-}
+
+console.log("Jesi siguran ?");
