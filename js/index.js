@@ -1442,13 +1442,92 @@
 
 
 
-const kemal = 2
+// const kemal = 2
 
 
-try {
-    kemal = 3
-} catch (error) {
-    // console.log(error);    
-}
+// try {
+//     kemal = 3
+// } catch (error) {
+//     // console.log(error);    
+// }
 
-console.log("Jesi siguran ?");
+// console.log("Jesi siguran ?");
+
+// console.log("1");
+// setTimeout(()=>{
+// console.log("2");
+// setTimeout(()=>{
+// console.log("3");
+// },0)
+// },5000)
+
+
+
+// const obecanje = new Promise((res,rej)=>{
+//    setTimeout(()=>{
+//     const result = 0 == false ? true : false
+//     if(result){
+//         res("Uspesno izvresena funkcija")
+//     }
+//     else {
+//         rej("Neuspensa funcija")
+//     }
+//    },1000) 
+// })
+
+
+// obecanje.then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// }).finally(()=>{
+//     console.log("no me interese ja se izvrism");
+// })
+
+
+
+
+
+
+const podaci = [{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9},{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9},{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9},{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9},{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9}]
+
+
+
+
+console.log(Math.ceil(podaci.length / 2));
+
+console.log(podaci.slice(0,2));
+
+
+// Ulazimo na nek isajt i sad imam listu usera.....
+// Znaci napraviti tako da nam se prikazu maksimalno 2 osobe iz podataka
+// Takodje napraviti paginaciju da se od korisnika pita koji ce page okej ?
+
+
+// TO JE ZA DOMACI
+
+// 2 zadatak => da vratite niz bez dublikata i da izracunate koji se koliko poanvlja 
+
+// 3 zadatak => da vratite niz gde ime pocinje sa "Ah"
+
+//4 zadatak => ako je is ponavlja , setuj neki drugi id koji nije unutar niza
