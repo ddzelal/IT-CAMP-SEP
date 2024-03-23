@@ -1526,8 +1526,25 @@ console.log(podaci.slice(0,2));
 
 // TO JE ZA DOMACI
 
-// 2 zadatak => da vratite niz bez dublikata i da izracunate koji se koliko poanvlja 
+// 2 zadatak => da vratite niz bez duplikata i da izracunate koji se koliko ponavlja 
 
 // 3 zadatak => da vratite niz gde ime pocinje sa "Ah"
 
-//4 zadatak => ako je is ponavlja , setuj neki drugi id koji nije unutar niza
+//4 zadatak => ako je id ponavlja , setuj neki drugi id koji nije unutar tog  niza
+
+
+
+
+// setInterval(()=>{
+//     setTimeout(()=>{
+//         console.log("eto me tako to setTimeout");
+//     },2000)
+//     console.log("eto me tako to");
+// },1000)
+
+fetch('https://62e57f72de23e26379210498.mockapi.io/v1').then(res =>  res.json()).then(data => {
+    let userId = prompt(`Unesite kojeg zelite korisnika od 1 do ${data.length}`)
+    fetch(`https://62e57f72de23e26379210498.mockapi.io/v1/${userId}`).then(res => res.json()).then((data)=>{
+        console.log(data,"data of user number:",data);
+    })
+})
