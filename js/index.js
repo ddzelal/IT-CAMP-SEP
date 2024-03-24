@@ -1541,10 +1541,47 @@ console.log(podaci.slice(0,2));
 //     },2000)
 //     console.log("eto me tako to");
 // },1000)
+const container = document.querySelector('.container')
 
 fetch('https://62e57f72de23e26379210498.mockapi.io/v1').then(res =>  res.json()).then(data => {
     let userId = prompt(`Unesite kojeg zelite korisnika od 1 do ${data.length}`)
     fetch(`https://62e57f72de23e26379210498.mockapi.io/v1/${userId}`).then(res => res.json()).then((data)=>{
-        console.log(data,"data of user number:",data);
+        container.innerHTML += `<div>
+        <p>${data.name}</p>
+        <img src=${data.avatar}/>
+        </div>`
     })
 })
+
+
+
+
+// let counter = 0;
+
+// let content = `<div>
+//                  <p>Testiramo nase znanje</p>
+//                  <button id="btn">KLIKNI ME start! ${counter}</button>
+//                 </div>`
+
+
+//                 container.innerHTML += content
+                
+
+// const btn = document.getElementById("btn")
+
+// btn.addEventListener('click',()=>{
+//     btn.style.background = "red"
+//     counter++;
+//     container.innerHTML += `<div>${counter}</div>`
+// })
+
+// const test = document.createElement('span',content).innerText = `TESTIRAMO NAS PARAGRAF`
+
+
+// let div = document.createElement("div");
+// container.append(div)
+// let p = document.createElement("p").innerText=`200`
+// div.append(p);
+
+
+// console.log(container,"cot",btn);
