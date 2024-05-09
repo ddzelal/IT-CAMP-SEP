@@ -1544,13 +1544,14 @@ console.log(podaci.slice(0,2));
 const container = document.querySelector('.container')
 
 fetch('https://62e57f72de23e26379210498.mockapi.io/v1').then(res =>  res.json()).then(data => {
-    let userId = prompt(`Unesite kojeg zelite korisnika od 1 do ${data.length}`)
-    fetch(`https://62e57f72de23e26379210498.mockapi.io/v1/${userId}`).then(res => res.json()).then((data)=>{
-        container.innerHTML += `<div>
-        <p>${data.name}</p>
-        <img src=${data.avatar}/>
-        </div>`
-    })
+
+        for (let index = 0; index < data.length; index++) {
+            container.innerHTML += `<div>
+            <p>${data[index].name}</p>
+            <img src=${data[index].avatar}/>
+            </div>`
+        }
+      
 })
 
 

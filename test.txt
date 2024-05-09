@@ -1,0 +1,18 @@
+1. Šta je JavaScript?
+2. Objasnite tipove podataka u JavaScriptu.
+3. Kako funkcioniše hoisting u JavaScriptu?
+4. Šta je closure u JavaScriptu i dajte primer?
+5. Kako se u JavaScriptu implementira nasleđivanje (CLASS-a)?
+6. Šta su promise-i u JavaScriptu i kako se koriste?
+7. Objasnite razliku između var, let i const.
+8. Kako možemo uhvatiti grešku u JavaScriptu?
+9. Šta je JSON i kako se u JavaScriptu koristi za rad sa podacima?
+10. Kako se može rukovati greškama u JavaScriptu (try-catch blok)?
+11. Šta su IIFE (Immediately Invoked Function Expressions) i za šta se koriste?
+12. Objasnite koncept asinhronog programiranja u JavaScriptu.
+13. Kako funkcionišu callback funkcije u JavaScriptu?
+14. Objasnite razliku između synchronous i asynchronous koda u JavaScriptu.
+15. Sta je klasa a sta objekat?
+16. Kako se definira klasa u JavaScriptu i kako se instancira objekat te klase?
+
+(function())() <<<<< OVO JE IIFE Function, ONA SE IZVRSAVA KADA ????? Mozda odma, mozda ..
