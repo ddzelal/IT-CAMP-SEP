@@ -6,6 +6,12 @@ import { Link } from 'react-router-dom';
 
 export const Login = () => {
 
+
+    const hardCodedUser = {
+        username:'admin',
+        password:'admin'
+    }
+
     const [userInput, setUserInput] = useState({
         username:'',
         password:''
@@ -14,7 +20,16 @@ export const Login = () => {
 
     const handleSubmit = () => {
         // Treba nam kad kliknemo da se uloguje!
+        // NPR NEKI API POZIV ???
+        console.log(userInput,"ovo je state!");
         
+    }
+
+    const handleChangeInput = (name,event) => {
+        setUserInput({
+            ...userInput,
+            [name]:event.target.value
+        })
     }
 
   return (
@@ -41,7 +56,7 @@ export const Login = () => {
         </Typography>
         <form  noValidate>
           <TextField
-        //   onChange={(event)=>handelAccount("username",event)}
+            onChange={(event)=>{handleChangeInput('username',event)}}
             variant="outlined"
             margin="normal"
             required
@@ -50,9 +65,14 @@ export const Login = () => {
             label="Username"
             name="username"
             autoFocus
+            autoComplete='off'
+            initialvalue=''
           />
+
           <TextField
-        //   onChange={(event)=>handelAccount("password",event)}
+            initialvalue=''
+            autoComplete='off'
+            onChange={(event)=>{handleChangeInput('password',event)}}
             variant="outlined"
             margin="normal"
             required
@@ -61,17 +81,17 @@ export const Login = () => {
             label="Password"
             type="password"
             id="password"
-            autoComplete="current-password"
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
           <Button
-            type="submit"
+            // type="submit"
             fullWidth
             variant="contained"
             color="primary"
+            onClick={handleSubmit}
             // onClick = {handelLogin}
           >
             Sign In
