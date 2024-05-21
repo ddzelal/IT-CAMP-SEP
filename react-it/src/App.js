@@ -1,22 +1,16 @@
-import React, { useState } from 'react'
-import Button from '@mui/material/Button';
-import MyCustomToggle from './components/MyCustomToggle.jsx';
-import { Box, Typography } from '@mui/material';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom';
+import { Login } from './pages/Login.js';
 
  const App = () => {
 
-  const [isActive, setIsActive] = useState(false)
-
-  const handleToggle = () => {
-    setIsActive(!isActive)
-  }
-
-
   return (
-   <Box>
-        <MyCustomToggle handleToggle={handleToggle} isActive={isActive}/>
-        <Typography>Jesam li ja aktivan ?{isActive ?  'Active' : 'NxotActive'}</Typography>
-    </Box>
+   <Routes>
+    <Route path='/'  element={<Login/>} />
+    <Route path='/page2' element={<h1>Ovo je page 2</h1>} />
+    <Route path='/page3' element={<h1>Ovo je page 3</h1>} />
+    <Route path="*">"404 Not Found"</Route>
+   </Routes>
   )
 }
 

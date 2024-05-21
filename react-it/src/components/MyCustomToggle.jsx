@@ -16,6 +16,8 @@ function MyCustomToggle(Props) {
   }
 
 
+  // LOGIN 
+  // DASHBOARD
 
   return (
     <Button onClick={()=> {handleRandomColor()}} color={currentColor}    variant='contained'>
