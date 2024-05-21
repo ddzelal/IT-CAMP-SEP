@@ -1,18 +1,24 @@
-import { Box, Button } from '@mui/material'
+import {  Button } from '@mui/material'
 import React, { useState } from 'react'
+import { randomColor } from '../utils';
+import { arrColor2 } from '../constants';
 
 function MyCustomToggle(Props) {
 
 
-// ZA DOMACI URADITI DA SE KLIKOM NA DUGME MENJA BOJA DUGMETA I DA SE MENJA TEKST NA DUGMETU
-// TAKODJE URADITI DA SE MENJA TEKST U TYPOGRAPHY KOMPONENTI
-// KORISTITI useState HOOK
-// KORISTITI MATERIAL UI KOMPONENTE
-
+  // ZA DOMACI URADITI DA NE MOZE DA SE PONOVI TRENTNA I PRETHODNA BOJA
   const {isActive,handleToggle} = Props;
 
+  const [currentColor, setCurrentColor] = useState('primary')
+
+  const handleRandomColor = () => {
+    setCurrentColor(randomColor(arrColor2,currentColor))
+  }
+
+
+
   return (
-    <Button onClick={()=> {handleToggle()}} color={isActive ? 'primary' : 'error'}    variant='contained'>
+    <Button onClick={()=> {handleRandomColor()}} color={currentColor}    variant='contained'>
       {isActive ? 'ON' : 'OFF'}
     </Button>
   )
