@@ -1,16 +1,17 @@
 import { Avatar, Box, Button, Checkbox, CssBaseline, FormControlLabel, Grid, TextField, Typography,Paper } from '@mui/material';
+import {hardCodedUser} from '../dumyDB/index'
 
 
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Login = () => {
 
 
-    const hardCodedUser = {
-        username:'admin',
-        password:'admin'
-    }
+  const navigate = useNavigate();
+
+
+
 
     const [userInput, setUserInput] = useState({
         username:'',
@@ -18,10 +19,18 @@ export const Login = () => {
     })
 
 
+
+
+
     const handleSubmit = () => {
         // Treba nam kad kliknemo da se uloguje!
         // NPR NEKI API POZIV ???
         console.log(userInput,"ovo je state!");
+        if(userInput.username === hardCodedUser.username && userInput.password === hardCodedUser.password){
+            navigate('/dashboard')
+          }else{
+            console.log('Pogresan username ili password!');
+          }
         
     }
 

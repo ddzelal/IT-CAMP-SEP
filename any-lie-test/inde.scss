@@ -1,0 +1,701 @@
+// 1. Font Mixins
+@mixin font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin font-open-sans {
+    font-family: "Open Sans", sans-serif;
+}
+
+@mixin font-helvetica {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+// 2. Spacers and Size Variables
+$spacer: 1rem !default;
+$spacers: (
+    ) !default;
+$spacers: map-merge(('a': auto,
+            0: 0,
+            6: 6px,
+            8: 8px,
+            10: 10px,
+            11: 11px,
+            12: 12px,
+            13: 13px,
+            15: 15px,
+            16: 16px,
+            17: 17px,
+            20: 20px,
+            22: 22px,
+            23: 23px,
+            25: 25px,
+            30: 30px,
+            35: 35px,
+            40: 40px,
+            45: 45px,
+            50: 50px,
+            55: 55px,
+            60: 60px,
+            65: 65px,
+            70: 70px,
+            80: 80px,
+            90: 90px,
+            100: 100px,
+            150: 150px,
+            200: 200px,
+            250: 250px,
+            260: 260px,
+            340: 340px,
+            640: 640px,
+        ), $spacers
+);
+
+$wptheme_fs: (
+    12: 12px,
+    14: 14px,
+    15: 15px,
+    16: 16px,
+    17: 17px,
+    18: 18px,
+    19: 19px,
+    20: 20px,
+    21: 21px,
+    22: 22px,
+    24: 24px,
+    26: 26px,
+    28: 28px,
+    30: 30px,
+    34: 34px,
+    36: 36px,
+    40: 40px,
+    48: 48px,
+    50: 50px,
+    60: 60px,
+    100: 100px
+);
+
+$wptheme_lss: (
+    1: 1,
+    18: 18px,
+    21: 21px,
+    25: 25px,
+    28: 28px,
+    32: 32px,
+    42: 42px,
+    100: 100%,
+    110: 110%,
+    120: 120%,
+    125: 125%,
+    130: 130%,
+    140: 140%,
+    160: 160%,
+);
+
+$wptheme_fws: (
+    'thin': 100,
+    'extra-light': 200,
+    'light': 300,
+    'normal': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+    'extra-bold': 800,
+    'black': 900
+);
+
+$wptheme_colors: (
+    'black': #000,
+    '0F1012':'#0F1012',
+    'white': #fff,
+    'BCBCBC': #BCBCBC,
+    'D9D9D9':#D9D9D9,
+    'DD0000': #DD0000,
+    '1B1F80': #1B1F80,
+    '3250B1': #3250B1,
+    'FF940F': #FF940F,
+    '666666': #666666,
+    '777777': #777777,
+    'E10000': #E10000,
+    '568C17': #568C17,
+    '5DAE01': #5DAE01,
+    'yelow':#fff500
+);
+
+$wptheme_bgs: (
+    'black': #000,
+    'gray-linear': linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(235, 235, 235, 1) 100%),
+    'yelow': #FFF500,
+    'FAFF00': #FAFF00,
+    'EBFF00': #EBFF00,
+    '3250B1': #3250B1,
+    '131326': #131326,
+    'EEEEEE': #EEEEEE,
+);
+
+$wpthemes_mws: (
+    24,
+    290,
+    380,
+    470,
+    480,
+    504,
+    510,
+    524,
+    596,
+    720,
+    750,
+    325,
+    640,
+    796,
+    1000,
+);
+
+
+// 3. Import Bootstrap
+@import "bootstrap.scss";
+
+// 4. Utility Classes
+/* Font Size */
+@each $theme_fs_name, $theme_fs in $wptheme_fs {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @include media-breakpoint-up($breakpoint) {
+            .fs#{$infix}-#{$theme_fs_name} {
+                font-size: $theme_fs;
+            }
+        }
+    }
+}
+
+/* Line Height */
+@each $theme_lh_name, $theme_lh in $wptheme_lss {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @include media-breakpoint-up($breakpoint) {
+            .lh#{$infix}-#{$theme_lh_name} {
+                line-height: $theme_lh;
+            }
+        }
+    }
+}
+
+/* Font Weight */
+@each $theme_fw_name, $theme_fw in $wptheme_fws {
+
+    .fw-#{$theme_fw_name},
+    .fw-#{$theme_fw} {
+        font-weight: $theme_fw !important;
+    }
+}
+
+/* Colors */
+@each $wptheme_color_n, $wptheme_color in $wptheme_colors {
+    .c-#{$wptheme_color_n} {
+        color: $wptheme_color;
+    }
+}
+
+/* Backgrounds */
+@each $wptheme_bg_n, $wptheme_bg in $wptheme_bgs {
+    .bg-#{$wptheme_bg_n} {
+        background: $wptheme_bg;
+    }
+}
+
+/* Max Widths */
+@each $wptheme_mw in $wpthemes_mws {
+    .mw-#{$wptheme_mw} {
+        max-width: #{$wptheme_mw}px;
+    }
+}
+
+.min-width-325 {
+    min-width: 325px;
+}
+
+// 5. Utility Classes for Gap
+@each $spacer-name, $spacer-size in $spacers {
+    .gap-#{$spacer-name} {
+        gap: $spacer-size;
+    }
+}
+
+// 6. Utility Classes for width
+@each $spacer-name, $spacer-size in $spacers {
+    .w-#{$spacer-name} {
+        width: $spacer-size;
+    }
+}
+
+// 7. Utility Classes for border radius
+
+@each $spacer-name, $spacer-size in $spacers {
+    .br-#{$spacer-name} {
+        border-radius: $spacer-size;
+    }
+}
+
+
+
+// FONTS
+
+.ff-popins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ff-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.ff-open-sans {
+    font-family: "Open Sans", sans-serif;
+}
+
+.ff-open-sans-italic {
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+}
+
+.ff-helvetica {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.ff-d-os-m-pp {
+    font-family: "Open Sans", sans-serif;
+
+    @media (max-width:768px) {
+        font-family: 'Poppins', sans-serif;
+    }
+
+}
+
+.fs-italic {
+    font-style: italic;
+}
+
+.wrapper-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .wrapper-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.header-wrapper {
+
+    @media (min-width: 768px) {
+        border-bottom: 1px solid #D9D9D9;
+    }
+}
+
+
+.video-wrapper {
+    border: 2px solid #000;
+    background: #E0E0E0;
+
+    @media (max-width: 767px) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+.extend-mobile {
+    @media (max-width: 767px) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-check {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url(../images/icon-check40x40.svg) center center no-repeat;
+    background-size: contain;
+
+    &.sm {
+        @media (max-width: 767px) {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    &-sm {
+        width: 34px;
+        height: 34px;
+        display: inline-block;
+        background: url(../images/icon-check40x40.svg) center center no-repeat;
+        background-size: contain;
+        transform: translateY(4px);
+
+        @media (max-width: 768px) {
+            max-width: 24px;
+        }
+    }
+
+    &.lg {
+        @media (max-width: 767px) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.x-container {
+    margin-left: 44px;
+    gap: 20px;
+
+    svg {
+        width: 30px;
+        height: 30px;
+        margin-top: 6px;
+    }
+
+
+    @media (max-width: 767px) {
+        margin-left: 0;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+// class for mobile 100% width
+
+.full-width {
+    max-width: 100%;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+
+// container for module 1 
+
+.module-1 {
+    width: 100%;
+    background: #131326 url('https://www.performancegolf.com/wp-content/uploads/2024/03/BG-Image-1.jpg') no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    padding: 40px 0;
+
+    table {
+        width: 100%;
+        font-size: 17px;
+        text-align: left;
+        max-width: 700px;
+        @include font-roboto;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+            line-height: 17px;
+        }
+
+
+        td {
+            border: 1px solid #CBCBCB;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            @media (min-width: 768px) {
+                padding-left: 24px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                width: 33%;
+            }
+        }
+
+        th {
+            border: 1px solid #CBCBCB;
+            font-weight: 700;
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            @media (min-width: 768px) {
+                padding-left: 15px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                width: 33%;
+            }
+        }
+    }
+}
+
+.module-2 {
+    width: 100%;
+    background: #EEEEEE url('https://www.performancegolf.com/wp-content/uploads/2024/03/feat2-min.jpg') no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    padding: 40px 0;
+}
+
+.module-3 {
+    width: 100%;
+    background: #131326;
+    padding: 40px 0;
+}
+
+.ractagnle-container {
+    background: url("https://www.performancegolf.com/wp-content/uploads/2024/03/Rectangle-68-min.png") no-repeat;
+    display: flex;
+    width: 364px;
+    height: 60px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 125%;
+    background-size: 100%;
+
+    @media (max-width: 767px) {
+        width: 260px;
+        height: 43px;
+        font-size: 24px;
+    }
+}
+
+
+// class for diplay-none for mobile
+
+.display-none-mobile {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.dot-list-with-bullets {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.dot-list-with-bullets-2 {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.border-r-10-device {
+    @media (min-width: 767px) {
+        border-radius: 10px;
+    }
+}
+
+.blue-container {
+    padding: 10px 20px;
+
+    @media (min-width: 767px) {
+        width: 100%;
+    }
+}
+
+.dash-container {
+    list-style-type: none;
+    padding-left: 20px;
+
+    li::before {
+        content: "-";
+        margin-right: 10px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+.container-adam {
+    display: flex;
+    width: 100%;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+
+    .left-side {
+        width: 598px;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    .right-side {
+        flex: 1;
+    }
+}
+
+.min-width-24 {
+    min-width: 24px;
+}
+
+
+.outer-container {
+    border: 2px solid #5555A8;
+    padding: 4px;
+
+    .inner-container {
+        border: 10px solid #5555A8;
+        padding: 3px;
+
+        .content-container {
+            border: 2px solid #5555A8;
+            padding: 30px 37px;
+
+            @media (max-width: 767px) {
+                padding: 33px 8px;
+                background: linear-gradient(180deg, #FFF 0%, #F3F1FF 100%);
+            }
+        }
+    }
+}
+
+.text-email {
+    font-size: 24px;
+    text-decoration: underline;
+
+    @media (max-width: 767px) {
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+}
+
+.float-right {
+    float: unset !important;
+
+    @media (min-width: 768px) {
+        float: right !important;
+    }
+}
+
+.image-margin-right-mobile {
+    @media (max-width: 767px) {
+        margin-right: 60px !important;
+    }
+}
+
+.button-shipping {
+    padding: 0 29px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #EBEBEB 100%);
+    display: flex;
+    gap: 5px;
+
+    span {
+        font-size: 24px;
+    }
+}
+
+
+.button-gold {
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid #B38B22;
+    background: linear-gradient(180deg, #F0FF91 0%, #F5C644 100%, #F5C644 100%, #F5C644 100%, rgba(196, 196, 196, 0.00) 100%, rgba(196, 196, 196, 0.00) 100%, #F90 100%);
+    display: flex;
+    padding: 13px;
+    gap: 22px;
+    margin-top: 30px;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+        padding: 9px;
+        width: 335px;
+        align-items: end;
+
+        img {
+            width: 55px !important;
+            height: 55px !important;
+        }
+
+        span {
+            font-size: 26px;
+            line-height: normal;
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: #000;
+    }
+}
+
+.faq-container {
+    .faq-item {
+        margin-bottom: 10px;
+    }
+
+    .faq-item input {
+        display: none;
+    }
+
+    .faq-question {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .faq-question .icon {
+        font-weight: bold;
+        background-image: url("http://localhost:10008/wp-content/themes/pgz/dist/images/ONE/plus.svg");
+        min-width: 31px;
+        min-height: 31px;
+        transition: transform 0.3s;
+        margin-right: 20px;
+    }
+
+    .faq-item input:checked~.faq-question .icon {
+        background-image: url("http://localhost:10008/wp-content/themes/pgz/dist/images/ONE/minus.svg");
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 0;
+        margin-left: 51px;
+    }
+
+    .faq-item input:checked~.faq-answer {
+        max-height: 2000px;
+        padding: 10px 0;
+    }
+}
